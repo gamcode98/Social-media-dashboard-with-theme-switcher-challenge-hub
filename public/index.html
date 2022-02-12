@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+</head>
+
+<body>
+  <header class="header wrapper">
+    <div class="header-text">
+      <h1>
+        Social Media Dashboard
+      </h1>
+      <p class="total-followers-text">
+        Total Followers: 23,004
+      </p>
+    </div>
+    <div class="switch-container">
+      <span class="theme">
+        Dark Mode
+      </span>
+      <label class="switch" for="checkbox">
+        <input type="checkbox" id="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+  <main>
+    <div class="social-medias wrapper">
+
+      <section class="social-media fb">
+        <div class="sm-user">
+          <img src="./assets/images/icon-facebook.svg" alt="icon-facebook" title="facebook">
+          <span class="sm-name">@nathanf</span>
+        </div>
+        <header>
+          <h2 class="sm-number">
+            1987
+          </h2>
+        </header>
+        <p class="sm-followers">
+          Followers
+        </p>
+        <p class="sm-today">
+          <img src="./assets/images/icon-up.svg" alt="icon-up" title="icon-up">
+          12 Today
+        </p>
+      </section>
+
+      <section class="social-media tw">
+        <div class="sm-user">
+          <img src="./assets/images/icon-twitter.svg" alt="icon-twitter" title="twitter">
+          <span class="sm-name">@nathanf</span>
+        </div>
+        <header>
+          <h2 class="sm-number">
+            1044
+          </h2>
+        </header>
+        <p class="sm-followers">
+          Followers
+        </p>
+        <p class="sm-today">
+          <img src="./assets/images/icon-up.svg" alt="icon-up" title="icon-up">
+          99 Today
+        </p>
+      </section>
+
+      <section class="social-media ig">
+        <div class="sm-user">
+          <img src="./assets/images/icon-instagram.svg" alt="icon-instagram" title="instagram">
+          <span class="sm-name">@realnathanf</span>
+        </div>
+        <header>
+          <h2 class="sm-number">
+            11k
+          </h2>
+        </header>
+        <p class="sm-followers">
+          Followers
+        </p>
+        <p class="sm-today">
+          <img src="./assets/images/icon-up.svg" alt="icon-up" title="icon-up">
+          1099 Today
+        </p>
+      </section>
+
+      <section class="social-media yt">
+        <div class="sm-user">
+          <img src="./assets/images/icon-youtube.svg" alt="icon-youtube" title="youtube">
+          <span class="sm-name">Nathan F.</span>
+        </div>
+        <header>
+          <h2 class="sm-number">
+            8239
+          </h2>
+        </header>
+        <p class="sm-followers">
+          Subscribers
+        </p>
+        <p class="sm-today">
+          <img src="./assets/images/icon-down.svg" alt="icon-up" title="icon-up">
+          144 Today
+        </p>
+      </section>
+
+    </div>
+
+    <section class="cards wrapper">
+      <header>
+        <h3>Overview - Today</h3>
+      </header>
+      <section class="card">
+        <header class="card-header">
+          <h4 class="card-overview">
+            Page Views
+          </h4>
+          <img src="./assets/images/icon-facebook.svg" alt="facebook" title="Facebook">
+        </header>
+        <p class="card-numbers">
+          87
+          <span>
+            <img src="./assets/images/icon-up.svg" alt="icon-up" title="icon-up">
+            3%
+          </span>
+
+        </p>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <h4 class="card-overview">
+            Likes
+          </h4>
+          <img src="./assets/images/icon-facebook.svg" alt="facebook" title="Facebook">
+        </header>
+        <p class="card-numbers">
+          52
+          <span class="isIconDown">
+            <img src="./assets/images/icon-down.svg" alt="icon-down" title="icon-down">
+            2%
+          </span>
+
+        </p>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <h4 class="card-overview">
+            Likes
+          </h4>
+          <img src="./assets/images/icon-instagram.svg" alt="instagram" title="Instagram">
+        </header>
+        <p class="card-numbers">
+          5462
+          <span>
+            <img src="./assets/images/icon-up.svg" alt="icon-up" title="icon-up">
+            2257%
+          </span>
+
+        </p>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <h4 class="card-overview">
+            Profile Views
+          </h4>
+          <img src="./assets/images/icon-instagram.svg" alt="instagram" title="Instagram">
+        </header>
+        <p class="card-numbers">
+          52k
+          <span>
+            <img src="./assets/images/icon-up.svg" alt="icon-up" title="icon-up">
+            1375%
+          </span>
+        </p>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <h4 class="card-overview">
+            Retweets
+          </h4>
+          <img src="./assets/images/icon-twitter.svg" alt="twitter" title="Twitter">
+        </header>
+        <p class="card-numbers">
+          117
+          <span>
+            <img src="./assets/images/icon-up.svg" alt="icon-up" title="icon-up">
+            303%
+          </span>
+        </p>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <h4 class="card-overview">
+            Likes
+          </h4>
+          <img src="./assets/images/icon-twitter.svg" alt="twitter" title="Twitter">
+        </header>
+        <p class="card-numbers">
+          507
+          <span>
+            <img src="./assets/images/icon-up.svg" alt="icon-up" title="icon-up">
+            553%
+          </span>
+        </p>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <h4 class="card-overview">
+            Likes
+          </h4>
+          <img src="./assets/images/icon-youtube.svg" alt="youtube" title="Youtube">
+        </header>
+        <p class="card-numbers">
+          107
+          <span class="isIconDown">
+            <img src="./assets/images/icon-down.svg" alt="icon-down" title="icon-down">
+            19%
+          </span>
+        </p>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <h4 class="card-overview">
+            Total Views
+          </h4>
+          <img src="./assets/images/icon-youtube.svg" alt="youtube" title="Youtube">
+        </header>
+        <p class="card-numbers">
+          1407
+          <span class="isIconDown">
+            <img src="./assets/images/icon-down.svg" alt="icon-down" title="icon-down">
+            12%
+          </span>
+        </p>
+      </section>
+
+    </section>
+
+  </main>
+
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Gamcode</a>.
+  </footer>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

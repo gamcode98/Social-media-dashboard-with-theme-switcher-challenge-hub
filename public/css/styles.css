@@ -1,0 +1,328 @@
+:root {
+  /* Colors */
+  /* Primary */
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --YouTube: hsl(348, 97%, 39%);
+  /* Dark Theme */
+  --Toggle-dark: linear-gradient(
+    to left,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  /* Light Theme */
+  --Toggle-light: linear-gradient(hsl(230, 22%, 74%), hsl(230, 22%, 74%));
+  /* Neutral */
+  /* Dark Theme
+  --bg-color-main: hsl(230, 17%, 14%);
+  --Top-BG-Pattern: hsl(232, 19%, 15%);
+  --Blue-Card-BG: hsl(228, 28%, 20%);
+  --Blue-Text: hsl(228, 34%, 66%);
+  --Text: hsl(0, 0%, 100%); */
+  /* Light Theme */
+  --bg-color-main: hsl(0, 0%, 100%);
+  --Top-BG-Pattern: hsl(225, 100%, 98%);
+  --Blue-Card-BG: hsl(227, 47%, 96%);
+  --Blue-Text: hsl(228, 12%, 44%);
+  --Text: hsl(230, 17%, 14%);
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Weights: 400, 700 */
+  margin: 0;
+  color: var(--Text);
+  position: relative;
+  background-color: var(--bg-color-main);
+}
+body::before {
+  position: absolute;
+  content: "";
+  background-color: var(--Top-BG-Pattern);
+  width: 100%;
+  height: 40vh;
+  z-index: -1;
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+}
+.wrapper {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  padding: 2rem 0 3rem;
+}
+.header-text {
+  border-bottom: 1px solid var(--Blue-Text);
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.total-followers-text {
+  margin-top: 0;
+  color: var(--Blue-Text);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.theme {
+  color: var(--Blue-Text);
+  font-weight: 700;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.8rem;
+  height: 1.3rem;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--Toggle-dark);
+  transition: transform 0.4s;
+  border-radius: 1rem;
+}
+.switch input {
+  display: none;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: 0.2rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  transition: 0.4s;
+  border-radius: 50%;
+  background-color: hsl(232, 19%, 15%);
+}
+input:checked + .slider {
+  background-image: var(--Toggle-light);
+}
+input:checked + .slider::before {
+  transform: translate(calc(160% - 0.2rem), 50%);
+  background-color: var(--Top-BG-Pattern);
+}
+.social-medias {
+  margin-bottom: 3rem;
+}
+.social-media {
+  padding: 2rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--Blue-Card-BG);
+  position: relative;
+  overflow-x: hidden;
+  margin-bottom: 1rem;
+}
+.social-media::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  height: 0.3rem;
+  width: 100%;
+}
+.social-media.fb::before {
+  background-color: var(--Facebook);
+}
+.social-media.tw::before {
+  background-color: var(--Twitter);
+}
+.social-media.ig::before {
+  background-image: var(--Instagram);
+}
+.social-media.yt::before {
+  background-color: var(--YouTube);
+}
+.sm-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sm-name {
+  font-size: 0.9rem;
+}
+.sm-user + header {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.sm-number {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.sm-followers {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+  margin-top: 0;
+  color: var(--Blue-Text);
+}
+.sm-today {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--Lime-Green);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.social-media.yt .sm-today {
+  color: var(--Bright-Red);
+}
+h3 {
+  color: var(--Blue-Text);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.cards header {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.cards header h3 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.card {
+  color: var(--Blue-Text);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--Blue-Card-BG);
+  margin-bottom: 1rem;
+}
+.card-header {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-header h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.card-numbers {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 2rem;
+  color: var(--Text);
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.card-numbers span {
+  align-self: flex-end;
+  padding-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  color: var(--Lime-Green);
+  font-size: 0.8rem;
+  font-weight: 700;
+  gap: 0.2rem;
+}
+.card-numbers span.isIconDown {
+  color: var(--Bright-Red);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  .social-medias,
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .social-media,
+  .card {
+    margin-bottom: 0;
+  }
+  .cards header h3 {
+    margin-bottom: 1rem;
+  }
+  .cards header {
+    grid-column: 1/-1;
+  }
+  .cards {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 80%;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+  .header-text {
+    border-bottom: initial;
+    margin-bottom: 0;
+  }
+  .switch-container {
+    gap: 1rem;
+  }
+  .social-medias,
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+.is-dark-mode {
+  /* Dark Theme */
+  --bg-color-main: hsl(230, 17%, 14%);
+  --Top-BG-Pattern: hsl(232, 19%, 15%);
+  --Blue-Card-BG: hsl(228, 28%, 20%);
+  --Blue-Text: hsl(228, 34%, 66%);
+  --Text: hsl(0, 0%, 100%);
+}
+.is-light-mode {
+  /* Light Theme */
+  --bg-color-main: hsl(0, 0%, 100%);
+  --Top-BG-Pattern: hsl(225, 100%, 98%);
+  --Blue-Card-BG: hsl(227, 47%, 96%);
+  --Blue-Text: hsl(228, 12%, 44%);
+  --Text: hsl(230, 17%, 14%);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark Theme */
+    --bg-color-main: hsl(230, 17%, 14%);
+    --Top-BG-Pattern: hsl(232, 19%, 15%);
+    --Blue-Card-BG: hsl(228, 28%, 20%);
+    --Blue-Text: hsl(228, 34%, 66%);
+    --Text: hsl(0, 0%, 100%);
+  }
+}
