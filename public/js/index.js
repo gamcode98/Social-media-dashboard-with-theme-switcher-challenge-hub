@@ -8,20 +8,22 @@ const $checkbox = document.getElementById("checkbox");
 //   checkbox.setAttribute("checked", true);
 // }
 
+console.log(w.matchMedia("(prefers-color-scheme: dark)"));
+
 if (w.matchMedia("(prefers-color-scheme: dark)").matches) {
-  $checkbox.setAttribute("checked", false);
+  $checkbox.setAttribute("checked", true);
 }
 
 const darkMode = () => {
   d.body.classList.remove("is-light-mode");
   d.body.classList.add("is-dark-mode");
-  $checkbox.removeAttribute("checked");
   ls.setItem("theme", "dark");
 };
 
 const lightMode = () => {
   d.body.classList.remove("is-dark-mode");
   d.body.classList.add("is-light-mode");
+  $checkbox.removeAttribute("checked");
   ls.setItem("theme", "light");
 };
 

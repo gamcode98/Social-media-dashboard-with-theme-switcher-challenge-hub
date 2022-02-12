@@ -8,22 +8,9 @@
   --Twitter: hsl(203, 89%, 53%);
   --Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --YouTube: hsl(348, 97%, 39%);
-  /* Dark Theme */
-  --Toggle-dark: linear-gradient(
-    to left,
-    hsl(210, 78%, 56%),
-    hsl(146, 68%, 55%)
-  );
+
   /* Light Theme */
-  --Toggle-light: linear-gradient(hsl(230, 22%, 74%), hsl(230, 22%, 74%));
-  /* Neutral */
-  /* Dark Theme
-  --bg-color-main: hsl(230, 17%, 14%);
-  --Top-BG-Pattern: hsl(232, 19%, 15%);
-  --Blue-Card-BG: hsl(228, 28%, 20%);
-  --Blue-Text: hsl(228, 34%, 66%);
-  --Text: hsl(0, 0%, 100%); */
-  /* Light Theme */
+  --Toggle: hsl(230, 22%, 74%);
   --bg-color-main: hsl(0, 0%, 100%);
   --Top-BG-Pattern: hsl(225, 100%, 98%);
   --Blue-Card-BG: hsl(227, 47%, 96%);
@@ -80,45 +67,36 @@ h1 {
   color: var(--Blue-Text);
   font-weight: 700;
 }
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 2.8rem;
-  height: 1.3rem;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: var(--Toggle-dark);
-  transition: transform 0.4s;
-  border-radius: 1rem;
-}
-.switch input {
+/* Switch */
+.checkbox {
   display: none;
 }
-.slider::before {
-  position: absolute;
+.checkbox:checked ~ .switch:before {
+  transform: translateX(0);
+}
+.switch {
+  width: 2.8rem;
+  height: 1.3rem;
+  display: block;
+  border-radius: 1rem;
+  background: var(--Toggle);
+  padding: 0.1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+}
+.switch::before {
   content: "";
-  height: 1rem;
+  display: block;
   width: 1rem;
-  left: 0.2rem;
-  bottom: 50%;
-  transform: translateY(50%);
-  transition: 0.4s;
-  border-radius: 50%;
-  background-color: hsl(232, 19%, 15%);
-}
-input:checked + .slider {
-  background-image: var(--Toggle-light);
-}
-input:checked + .slider::before {
-  transform: translate(calc(160% - 0.2rem), 50%);
+  height: 1rem;
   background-color: var(--Top-BG-Pattern);
+  border-radius: 50%;
+  transform: translateX(150%);
+  transition: 0.3s;
+  will-change: transform;
 }
+
 .social-medias {
   margin-bottom: 3rem;
 }
@@ -315,6 +293,7 @@ h3 {
   --Blue-Card-BG: hsl(227, 47%, 96%);
   --Blue-Text: hsl(228, 12%, 44%);
   --Text: hsl(230, 17%, 14%);
+  --Toggle: hsl(230, 22%, 74%);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -324,5 +303,6 @@ h3 {
     --Blue-Card-BG: hsl(228, 28%, 20%);
     --Blue-Text: hsl(228, 34%, 66%);
     --Text: hsl(0, 0%, 100%);
+    --Toggle: linear-gradient(to left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   }
 }
